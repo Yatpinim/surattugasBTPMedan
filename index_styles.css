@@ -1,0 +1,110 @@
+    :root{
+      --sidebar-width: 240px;
+      --accent: #0f88c8;
+      --card-radius: 8px;
+    }
+    body{
+    background:#f1f5f9}
+    /* Sidebar */
+    .sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width:var(--sidebar-width);
+    background:#fff;
+    border-right:1px solid #e6eef6;
+    z-index:1020;
+    padding:1.25rem 0;
+    }
+    .sidebar .logo{
+    font-weight:700;
+    padding:0 1.25rem;
+    margin-bottom:1.25rem;
+    color:var(--accent)
+    }
+    .sidebar .nav-link{
+    color:#5b6b73;
+    border-radius:6px;
+    padding:0.65rem 1.25rem;
+    margin:0.25rem 0
+    }
+    .sidebar .nav-link.active{
+    background:#eaf6ff;
+    color:var(--accent);
+    font-weight:600
+    }
+    .main{
+    margin-left:var(--sidebar-width);
+    padding:2rem
+    }
+    .topbar{
+    height:92px;
+    background:var(--accent);
+    color:#fff;
+    padding:1.25rem;
+    border-radius:8px;
+    margin-bottom:1.25rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between
+    }
+    .topbar .search input{
+    width:360px;
+    max-width:45vw;
+    border-radius:8px;
+    padding:0.5rem 0.75rem;
+    order:0
+    }
+    .cards-row .card{
+    border-radius:12px
+    }
+    /* Dashboard cards */
+    .kpi-card{
+    min-height:100px
+    }
+    /* Table card */
+    .table-card{
+    background:#fff;
+    border-radius:12px;
+    padding:1rem;
+    box-shadow:0 6px 18px rgba(10,30,50,0.06)
+    }
+    .table-card .project{
+    display:flex;
+    align-items:center;
+    gap:.75rem
+    }
+    .avatar-stack{
+    display:flex;
+    align-items:center
+    }
+    .avatar-stack img{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    border:2px solid #fff;
+    margin-left:-10px;
+    box-shadow:0 1px 2px rgba(0,0,0,0.05)
+    }
+    /* Dark table */
+    .table-card-dark{
+    background:#0f3a4d;
+    color:#d6eef8
+    }
+    .table-card-dark a{
+    color:inherit
+    }
+    .progress-small{
+    height:8px;border-radius:6px
+    }
+    @media(max-width:900px){
+      .sidebar{display:none}
+      .main{margin-left:0;padding:1rem}
+      .topbar .search input{width:100%}
+    }
+    /* Batasi lebar konten utama */
+    .container-limit {
+    max-width: 1200px;   /* bisa diganti 1200 jika mau lebih kecil */
+    margin-left: 250px;
+}
